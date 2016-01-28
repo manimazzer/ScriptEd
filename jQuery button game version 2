@@ -11,7 +11,7 @@
     </h3>
     <br>
     <h3>
-     Can you turn off all the buttons except the blue one? (The solution is 4,2,6,7,3,5,1)
+     Can you turn off all the buttons except the blue one? (The solution is 4, 2, 6, 7, 3, 5, 1)
     </h3>
 
     <button style="background-color:lightblue" id ="one">1</button>
