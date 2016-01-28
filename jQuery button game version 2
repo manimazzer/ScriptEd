@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Button Game</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+<body>   
+    <h3>
+        Click a button to turn other buttons off or on.
+    </h3>
+    <br>
+    <h3>
+     Can you turn off all the buttons except the blue one?
+    </h3>
+
+    <button style="background-color:lightblue" id ="one">1</button>
+    <button style="background-color:lightgreen" id = "two">2</button>
+    <button style="background-color:lightgreen" id = "three">3</button>
+    <button style="background-color:lightgreen" id = "four">4</button>
+    <button style="background-color:lightgreen" id = "five">5</button>
+    <button style="background-color:lightgreen" id = "six">6</button>
+    <button style="background-color:lightgreen" id = "seven">7</button>
+    <button style="background-color:lightgreen" id = "eight">8</button>
+    
+    <!--jQuery elements below: toggle, click, ready-->
+    <script>
+    $( document ).ready(function() {
+
+
+        $("#one").click(function(){
+           if($("#five").prop('disabled')){ 
+           $("#five").prop('disabled', false);
+            }
+            else{
+           $("#five").prop('disabled', true);
+            }
+        });
+
+        $("#two").click(function(){
+           if($("#four").prop('disabled')){ 
+           $("#four").prop('disabled', false);
+            }
+            else{
+           $("#four").prop('disabled', true);
+            }
+        });
+
+        $("#three").click(function(){
+           if($("#seven").prop('disabled')){ 
+           $("#seven").prop('disabled', false);
+            }
+            else{
+           $("#seven").prop('disabled', true);
+            }
+        });
+
+        $("#four").click(function(){
+           if($("#eight").prop('disabled')){ 
+           $("#eight").prop('disabled', false);
+            }
+            else{
+           $("#eight").prop('disabled', true);
+            }
+        });
+
+        $("#five").click(function(){
+           if($("#three").prop('disabled')){ 
+           $("#three").prop('disabled', false);
+            }
+            else{
+           $("#three").prop('disabled', true);
+            }
+        });
+
+        $("#six").click(function(){
+           if($("#two").prop('disabled')){ 
+           $("#two").prop('disabled', false);
+            }
+            else{
+           $("#two").prop('disabled', true);
+            }
+        });
+
+        $("#seven").click(function(){
+           if($("#six").prop('disabled')){ 
+           $("#six").prop('disabled', false);
+            }
+            else{
+           $("#six").prop('disabled', true);
+            }
+        });
+
+        $("#eight").click(function(){
+           if($("#one").prop('disabled')){ 
+           $("#one").prop('disabled', false);
+            }
+            else{
+           $("#one").prop('disabled', true);
+            }
+        });
+        
+    });
+    
+    </script>
+</body>
+</html>
