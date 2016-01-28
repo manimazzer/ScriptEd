@@ -11,7 +11,7 @@
     </h3>
     <br>
     <h3>
-     Can you turn off all the buttons except the blue one?
+     Can you turn off all the buttons except the blue one? (The solution is 4,2,6,7,3,5,1)
     </h3>
 
     <button style="background-color:lightblue" id ="one">1</button>
@@ -23,7 +23,7 @@
     <button style="background-color:lightgreen" id = "seven">7</button>
     <button style="background-color:lightgreen" id = "eight">8</button>
     
-    <!--jQuery elements below: toggle, click, ready-->
+    <!--jQuery methods that are used below: .ready, .click, .prop('disabled')-->
     <script>
     $( document ).ready(function() {
 
@@ -99,9 +99,9 @@
            $("#one").prop('disabled', true);
             }
         });
-        
+
+
     });
-    
     </script>
 </body>
 </html>
