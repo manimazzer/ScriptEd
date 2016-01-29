@@ -4,99 +4,156 @@
     <meta charset="utf-8">
     <title>Button Game</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+    <style>
+        .other{
+            background-color: lightgreen;
+            height:50px; 
+            width:50px;
+            font-size:1.1em;
+        }
+        .main{
+            background-color:lightblue;
+            height:50px; 
+            width:50px;
+            font-size:1.1em;
+        }
+    </style>
 </head>
 <body>   
-    <h3>
-        Click a button to turn other buttons off or on.
-    </h3>
-    <br>
-    <h3>
-     Can you turn off all the buttons except the blue one? (The solution is 4, 2, 6, 7, 3, 5, 1)
-    </h3>
+    <h3>Click a button to turn other buttons off or on.</h3>
 
-    <button style="background-color:lightblue" id ="one">1</button>
-    <button style="background-color:lightgreen" id = "two">2</button>
-    <button style="background-color:lightgreen" id = "three">3</button>
-    <button style="background-color:lightgreen" id = "four">4</button>
-    <button style="background-color:lightgreen" id = "five">5</button>
-    <button style="background-color:lightgreen" id = "six">6</button>
-    <button style="background-color:lightgreen" id = "seven">7</button>
-    <button style="background-color:lightgreen" id = "eight">8</button>
+    <h3>Can you turn off all the buttons except the <button style= "background-color:lightblue">1</button> ?</h3> 
+
+    <h3>(The solution is 4, 2, 6, 7, 3, 5, 1)</h3>
+
+    <button class= "main" id ="one">1</button>
+    <button class= "other" id = "two">2</button>
+    <button class= "other" id = "three">3</button>
+    <button class= "other" id = "four">4</button>
+    <button class= "other" id = "five">5</button>
+    <button class= "other" id = "six">6</button>
+    <button class= "other" id = "seven">7</button>
+    <button class= "other" id = "eight">8</button>
     
-    <!--jQuery methods that are used below: .ready, .click, .prop('disabled')-->
+    <!--jQuery methods that are used below: .ready, .css, .click, .prop('disabled')-->
     <script>
-    $( document ).ready(function() {
 
+    var counter = 0; 
+
+    $( document ).ready(function() {
 
         $("#one").click(function(){
            if($("#five").prop('disabled')){ 
            $("#five").prop('disabled', false);
+           $("#five").css('backgroundColor', 'lightgreen');
+           counter --;
             }
             else{
            $("#five").prop('disabled', true);
+           $("#five").css('backgroundColor', 'white');
+           counter ++; 
+           if(counter == 7){
+            alert("you win!!");
+           }
             }
         });
 
         $("#two").click(function(){
            if($("#four").prop('disabled')){ 
            $("#four").prop('disabled', false);
+           $("#four").css('backgroundColor', 'lightgreen');
+           counter --;
             }
             else{
            $("#four").prop('disabled', true);
+           $("#four").css('backgroundColor', 'white');
+           counter ++; 
             }
         });
 
         $("#three").click(function(){
            if($("#seven").prop('disabled')){ 
            $("#seven").prop('disabled', false);
+           $("#seven").css('backgroundColor', 'lightgreen');
+           counter --;
             }
             else{
            $("#seven").prop('disabled', true);
+           $("#seven").css('backgroundColor', 'white');
+           counter ++; 
             }
         });
 
         $("#four").click(function(){
            if($("#eight").prop('disabled')){ 
            $("#eight").prop('disabled', false);
+           $("#eight").css('backgroundColor', 'lightgreen');
+           counter --;
             }
             else{
            $("#eight").prop('disabled', true);
+           $("#eight").css('backgroundColor', 'white');
+           counter ++; 
             }
         });
 
         $("#five").click(function(){
            if($("#three").prop('disabled')){ 
            $("#three").prop('disabled', false);
+           $("#three").css('backgroundColor', 'lightgreen');
+           counter --;
+           console.log(counter);
             }
             else{
            $("#three").prop('disabled', true);
+           $("#three").css('backgroundColor', 'white');
+           counter ++; 
+           console.log(counter);
             }
         });
 
         $("#six").click(function(){
            if($("#two").prop('disabled')){ 
            $("#two").prop('disabled', false);
+           $("#two").css('backgroundColor', 'lightgreen');
+           counter --;
+           console.log(counter);
             }
             else{
            $("#two").prop('disabled', true);
+           $("#two").css('backgroundColor', 'white');
+           counter ++; 
+           console.log(counter);
             }
         });
 
         $("#seven").click(function(){
            if($("#six").prop('disabled')){ 
            $("#six").prop('disabled', false);
+           $("#six").css('backgroundColor', 'lightgreen');
+           counter --;
+           console.log(counter);
             }
             else{
            $("#six").prop('disabled', true);
+           $("#six").css('backgroundColor', 'white');
+           counter ++; 
+           console.log(counter);
             }
         });
 
         $("#eight").click(function(){
            if($("#one").prop('disabled')){ 
            $("#one").prop('disabled', false);
+           $("#one").css('backgroundColor', 'lightblue');
+           counter --;
+           console.log(counter);
             }
             else{
            $("#one").prop('disabled', true);
+           $("#one").css('backgroundColor', 'white');
+           counter ++; 
             }
         });
 
