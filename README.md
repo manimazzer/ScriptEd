@@ -1,1 +1,1 @@
-# SriptEd
+# ScriptEd
