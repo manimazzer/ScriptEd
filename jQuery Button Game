@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Button Game</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+<body>   
+    <h3>
+        Click a button to make other buttons disappear and reappear. 
+    </h3>
+    <br>
+    <h3>
+     Can you make all the buttons disappear except the blue button?
+    </h3>
+
+    <button style="background-color:lightblue" id ="one">1</button>
+    <button style="background-color:lightgreen" id = "two">2</button>
+    <button style="background-color:lightgreen" id = "three">3</button>
+    <button style="background-color:lightgreen" id = "four">4</button>
+    <button style="background-color:lightgreen" id = "five">5</button>
+    <button style="background-color:lightgreen" id = "six">6</button>
+    <button style="background-color:lightgreen" id = "seven">7</button>
+    <button style="background-color:lightgreen" id = "eight">8</button>
+    
+    
+    <!--jQuery elements below: toggle, click, ready-->
+    <script>
+    $( document ).ready(function() {
+        $("#one").click(function(){
+            $("#five").toggle();
+        });
+        $("#two").click(function(){
+            $("#four").toggle();
+        });
+        $("#three").click(function(){
+            $("#seven").toggle();
+        });
+        $("#four").click(function(){
+            $("#eight").toggle();
+        });
+        $("#five").click(function(){
+            $("#three").toggle();
+        });
+        $("#six").click(function(){
+            $("#two").toggle();
+        });
+        $("#seven").click(function(){
+            $("#six").toggle();
+        });
+        $("#eight").click(function(){
+            $("#one").toggle();
+        });
+    });
+    </script>
+</body>
+</html>
