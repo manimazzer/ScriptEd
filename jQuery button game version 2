@@ -103,13 +103,11 @@
            $("#three").prop('disabled', false);
            $("#three").css('backgroundColor', 'lightgreen');
            counter --;
-           console.log(counter);
             }
             else{
            $("#three").prop('disabled', true);
            $("#three").css('backgroundColor', 'white');
            counter ++; 
-           console.log(counter);
             }
         });
 
@@ -118,13 +116,11 @@
            $("#two").prop('disabled', false);
            $("#two").css('backgroundColor', 'lightgreen');
            counter --;
-           console.log(counter);
             }
             else{
            $("#two").prop('disabled', true);
            $("#two").css('backgroundColor', 'white');
            counter ++; 
-           console.log(counter);
             }
         });
 
@@ -133,13 +129,11 @@
            $("#six").prop('disabled', false);
            $("#six").css('backgroundColor', 'lightgreen');
            counter --;
-           console.log(counter);
             }
             else{
            $("#six").prop('disabled', true);
            $("#six").css('backgroundColor', 'white');
            counter ++; 
-           console.log(counter);
             }
         });
 
@@ -148,7 +142,6 @@
            $("#one").prop('disabled', false);
            $("#one").css('backgroundColor', 'lightblue');
            counter --;
-           console.log(counter);
             }
             else{
            $("#one").prop('disabled', true);
